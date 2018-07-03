@@ -19,10 +19,7 @@ var getKey = '';
 $(document).ready(function() {
 
      $("#add-train").on("click", function() {
-     	// YOUR TASK!!!
-     	// Code in the logic for storing and retrieving the most recent user.
-     	// Dont forget to provide initial data to your Firebase database.
-     	name = $('#name-input').val().trim();
+      	name = $('#name-input').val().trim();
      	destination = $('#destination-input').val().trim();
      	firstTrainTime = $('#first-train-time-input').val().trim();
      	frequency = $('#frequency-input').val().trim();
@@ -43,13 +40,8 @@ $(document).ready(function() {
                nextTrainFormatted: nextTrainFormatted,
                minutesTillTrain: minutesTillTrain
      	});
-          // The notes below are for finding the path to the key in the data being pushed, leaving as notes to save for later use.
-          /*console.log(keyHolder.path.u[0]);
-          var key = keyHolder.path.u[0];
-          console.log(key);*/
-     	// Don't refresh the page!
-
-          $('#name-input').val('');
+         
+        $('#name-input').val('');
      	$('#destination-input').val('');
      	$('#first-train-time-input').val('');
      	$('#frequency-input').val('');
@@ -75,7 +67,7 @@ $(document).ready(function() {
           "</tr>");
 // Handle the errors
 }, function(errorObject){
-	//console.log("Errors handled: " + errorObject.code)
+	console.log("Errors handled: " + errorObject.code)
 });
 
 $("body").on("click", ".remove-train", function(){
